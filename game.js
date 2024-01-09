@@ -33,7 +33,7 @@ let bouncingEnemy1, bouncingEnemy2, bouncingEnemy3, bouncingEnemy4, bouncingEnem
 let blueBouncyEnemy1, blueBouncyEnemy2, blueBouncyEnemy3, blueBouncyEnemy4, blueBouncyEnemy5;
 let redBouncyEnemy1, redBouncyEnemy2, redBouncyEnemy3, redBouncyEnemy4, redBouncyEnemy5;
 var playerHealth = 100; // Set an initial value for player health
-var gameOver = false;
+
 
 
 
@@ -685,7 +685,7 @@ function gameOverScreen() {
         // Display the game over screen
         document.getElementById('game-over-screen').style.display = 'flex';
         // Additional game over logic if needed
-        gameOver = true;
+
     }
 
 function resetGame() {
@@ -706,7 +706,7 @@ function resetGame() {
 
 function update() {
 
-if (!gameOver) {
+
  hpBar.x = player.x - 50; // Adjust the offset based on your preference
     hpBar.y = player.y - 100;
     // Update the position of the on-screen buttons with the camera
@@ -775,7 +775,7 @@ jumpButton.y = this.cameras.main.worldView.bottom - 100;
     if (playerHealth <= 0) {
 gameOverScreen();
     }
-}
+
 }
 
 
